@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Ноя 24 2020 г., 09:56
+-- Время создания: Ноя 24 2020 г., 10:05
 -- Версия сервера: 10.3.13-MariaDB-log
 -- Версия PHP: 7.2.22
 
@@ -189,14 +189,6 @@ CREATE TABLE `user` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Дамп данных таблицы `user`
---
-
-INSERT INTO `user` (`id`, `username`, `auth_key`, `password_hash`, `password_reset_token`, `email`, `status`, `role`, `created_at`, `updated_at`) VALUES
-(42, 'sardor', 'YVY-v3M26bY4oLB2m0ifXirXZX43-76g', '$2y$13$8QwC7kFvjEu5mshXxtkKr.hFChnYv2hsMU7GwqORQEez9Kmkh0R0a', NULL, 'sardor88.88@mail.ru', 10, 'admin', 1606198983, 1606198983),
-(43, 'laylo', 'ZioW3u65zsGcBXaEL9lsB2hU04OSHwQj', '$2y$13$ykCtbchW5cN4sDm8pSLc4.8Nt9tYAov//STFWAQInuEdRvs5AsT1y', NULL, 'laylo@mail.ru', 10, 'klient', 1606199223, 1606199223);
-
---
 -- Индексы сохранённых таблиц
 --
 
@@ -273,7 +265,7 @@ ALTER TABLE `post`
 -- AUTO_INCREMENT для таблицы `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=44;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=45;
 
 --
 -- Ограничения внешнего ключа сохраненных таблиц
