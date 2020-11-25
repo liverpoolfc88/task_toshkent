@@ -93,6 +93,7 @@ class UserController extends Controller
             $request = Yii::$app->request->post();
             $model->username = $request['User']['username'];
             $model->email =  $request['User']['email'];
+            $model->status = ArrayHelper::getValue(Yii::$app->params, 'user.defaultStatus', UserStatus::ACTIVE);
             $model->access_token = \Yii::$app->security->generateRandomString(255);
             $model->auth_key = Yii::$app->security->generateRandomString();
             $model->password_hash = Yii::$app->security->generatePasswordHash($request['User']['password']) ;
@@ -116,6 +117,7 @@ class UserController extends Controller
             $request = Yii::$app->request->post();
             $model->username = $request['username'];
             $model->email =  $request['email'];
+            $model->status = ArrayHelper::getValue(Yii::$app->params, 'user.defaultStatus', UserStatus::ACTIVE);
             $model->access_token = \Yii::$app->security->generateRandomString(255);
             $model->auth_key = Yii::$app->security->generateRandomString();
             $model->password_hash = Yii::$app->security->generatePasswordHash($request['password']) ;

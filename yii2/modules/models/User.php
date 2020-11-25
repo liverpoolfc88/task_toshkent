@@ -48,7 +48,7 @@ class User extends \yii\db\ActiveRecord
             [['password_hash', 'password_reset_token', 'email'], 'string', 'max' => 255],
             ['password', 'required'],
             ['password', 'string', 'min' => 6],
-            ['$access_token', 'string'],
+            ['access_token', 'string'],
             ['retypePassword', 'required'],
             ['retypePassword', 'compare', 'compareAttribute' => 'password'],
         ];
